@@ -1,0 +1,49 @@
+<h1>dashboard works!</h1>
+<h2>child components</h2>
+<h2>Message from child :</h2>{{ message }}
+
+<h1>
+  Election Commission Parent component.
+  </h1>
+ 
+  <h3>Vote Counting (via ViewChild)</h3>
+  <button (click)="start()">Start Vote Counting</button>
+  <button (click)="stop()">Stop Vote Counting(Lunch Break)</button>
+  <div class="seconds">{{viewData}}</div>
+
+<h1>Parent component</h1>
+<br>
+
+
+  <app-user></app-user>
+
+
+
+<app-user [item]="currentItem"></app-user>
+
+<button (click)="sendData()">service</button>
+{{value}}
+<app-user (newItemEvent)="addItem($event)"></app-user>
+
+<ul>
+    <li *ngFor="let item of items">{{item}}</li>
+  </ul>
+<input type="text" (change)= "onChange($event)">
+<button (click)="valueChange()">click to change value</button>
+  <ng-content></ng-content>
+
+  <input [(ngModel)]="a"> 
+  <button (click)="b()">777777</button>
+
+<h2>{{sahil | uppercase}}</h2>
+<h2>{{sahil | lowercase}}</h2>
+<h2>{{sahil | titlecase}}</h2>
+<h2>{{sahil | slice:3}}</h2>
+<h2>{{date | date:'long' | uppercase}}</h2>
+
+<h2>{{sahil | custom}}</h2>
+<h2>{{sahil | punia}}</h2>
+
+
+
+<router-outlet></router-outlet>
